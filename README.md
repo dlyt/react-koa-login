@@ -3,5 +3,12 @@
 npm install
 npm run dev
 ```
+
+## api文档
+```js
+npm run docs
+```
+查看 http://localhost:5000/docs/
+
 ## 效果图
-![Octicons](http://i2.muimg.com/1949/21a14f2269610f34.gif)
+![Octicons](http://cdn.tycocn.com/123.gif)
