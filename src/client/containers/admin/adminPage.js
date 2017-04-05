@@ -73,12 +73,6 @@ class App extends Component {
   }
 }
 
-//先定义props
-App.propTypes = {
-  auth: React.PropTypes.object.isRequired,
-}
-
-
 /*
 如果定义该参数，组件将会监听 Redux store 的变化。任何时候，只要 Redux store 发生改变，mapStateToProps 函数就会被调用
 http://cn.redux.js.org/docs/react-redux/api.html
