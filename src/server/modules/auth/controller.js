@@ -22,7 +22,7 @@ import passport from 'koa-passport'
     @apiParam {String} password  密码.
 
     @apiExample Example usage:
-    curl -H "Content-Type: application/json" -X POST -d '{ "username": "johndoe@gmail.com", "password": "foo" }' localhost:5000/auth
+    curl -H "Content-Type: application/json" -X POST -d '{ "username": "johndoe@gmail.com", "password": "foo" }' localhost:5000/api/auth
 
     @apiSuccess {Object}   user           用户对象
     @apiSuccess {ObjectId} user._id       用户ID

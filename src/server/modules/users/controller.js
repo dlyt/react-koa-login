@@ -7,7 +7,7 @@ import User from '../../models/users'
    @apiName 新增游客
    @apiGroup Users
    @apiExample Example usage:
-    curl -H "Content-Type: application/json" -X GET http://localhost:5000/users
+    curl -H "Content-Type: application/json" -X GET http://localhost:5000/api/users
 
    @apiParam {Object} user               用户对象 (必需)
    @apiParam {String} user.username      用户名.
