@@ -4,28 +4,9 @@ import nodemailer from  'nodemailer'
 import smtpTransport from 'nodemailer-smtp-transport'
 import wellknown from 'nodemailer-wellknown'
 import app from '../../../../bin/server'
-import * as Redis from '../redis'
 
 const handle = {}
 
-//统计api访问量
-handle.count = async (key) => {
-  try {
-    let num = await Redis.get(key)
-    let newNum = num === 'NaN' ? 0 : parseInt(num) + 1
-    await Redis.set(key, newNum)
-  } catch (e) {
-    Handle.sendEmail(e.message)
-  }
-}
-
-handle.success = (data = {}) => {
-  return {
-    success: true,
-    code: 0,
-    data: data
-  }
-}
 
 //报错时，发送邮件
 handle.sendEmail = (mes) => {

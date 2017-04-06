@@ -2,8 +2,8 @@
  * webpack是一款模块加载器兼打包工具，
  * 它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。
  */
-import path from 'path'
-import webpack from 'webpack'
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: {

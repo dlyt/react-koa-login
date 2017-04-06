@@ -8,7 +8,6 @@ const User = new mongoose.Schema({
   name: { type: String },
   username: { type: String },
   password: { type: String },
-  uuid: { type: String, unique: true }
 }, { versionKey: '' })
 
 User.pre('save', function preSave (next) {
