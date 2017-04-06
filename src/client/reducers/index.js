@@ -9,9 +9,11 @@ reducer 就是一个纯函数，接收旧的 state 和 action，返回新的 sta
 我们使用 combineReducers() 将多个 reducer 合并成为一个。
  */
 import { combineReducers } from 'redux'
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 import auth from './auth'
 
 
 export default combineReducers({
   auth,
+  router: routerReducer
 })

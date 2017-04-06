@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.less'
+import './welcome.less'
 
 
 class Welcome extends React.PureComponent {

@@ -1,17 +1,21 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { Route } from 'react-router'
+import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
-import { Provider } from 'react-redux'
-import { HashRouter as Router } from 'react-router-dom'
-import { renderRoutes } from 'react-router-config'
+import { ConnectedRouter } from 'react-router-redux'
+import createHistory from 'history/createHashHistory'
+
 import jwtDecode from 'jwt-decode'
 import { setCurrentUser } from './actions/authActions'
 import setAuthorizationToken from './utils/setAuthorizationToken'
-import reducer from './reducers'
+
+import reducers from './reducers'
 import routes from './routes'
 
+const history = createHistory()
 /*
 如果不引入 thunk 它只有同步操作。每当 dispatch action 时，state 会被立即更新。
 这时候使用异步操作会报错，如下：
@@ -21,10 +25,13 @@ Actions must be plain objects. Use custom middleware for async actions.
 这时，这个 action 创建函数就成为了 thunk。
 
 thunk 的一个优点是它的结果可以再次被 dispatch
+
+react-router-redux:
+https://github.com/reacttraining/react-router/tree/master/packages/react-router-redux
  */
 const loggerMiddleware = createLogger()
 const store = createStore(
-  reducer,
+  reducers,
   compose(
     applyMiddleware(
       thunkMiddleware,    // 允许我们 dispatch() 函数
@@ -68,9 +75,9 @@ react-router 自己根据 url 去 render 相应的模块。
 let rootElement = document.getElementById('root')
 render(
   <Provider store={store}>
-    <Router>
-      {renderRoutes(routes)}
-    </Router>
+    <ConnectedRouter history={history}>
+      {routes}
+    </ConnectedRouter>
   </Provider>,
   rootElement
 )
