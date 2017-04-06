@@ -44,3 +44,5 @@ npm run docs
 └── webpack.config.js        # webpack配置文件
 
 ```
+
+注：参考了 https://github.com/jiangxy/react-antd-admin 的一些样式。
