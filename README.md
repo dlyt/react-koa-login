@@ -11,7 +11,7 @@ npm run docs
 查看 http://localhost:5000/docs/
 
 ## 效果图
-![Octicons](https://github.com/dlyt/react-koa-login/blob/master/demo.gif)
+![Octicons](http://i2.bvimg.com/1949/925e52d148334538.gif)
 
 ## 目录结构
 ```
