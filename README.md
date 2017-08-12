@@ -44,8 +44,7 @@ npm run docs
 ```
 ## 技术栈
 
-后端api是由`Koa2`构建，前端使用的是`react`，数据管理使用了`redux`，使用 [axios](https://github.com/mzabriskie/axios) 进行数据的请求。路由
-跳转使用了比较新的`react-router`的4.0版。前端样式使用了阿里的[antd](https://ant.design/index-cn)。打包工具是`wabpack`
+后端api是由`Koa2`构建，前端使用的是`react`，数据管理使用了`redux`，使用 [axios](https://github.com/mzabriskie/axios) 进行数据的请求。路由跳转使用了比较新的`react-router`的4.0版。前端样式使用了阿里的[antd](https://ant.design/index-cn)。打包工具是`wabpack`
 
 
 
